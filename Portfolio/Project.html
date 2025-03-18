@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            background: #121212;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            text-align: center;
+        }
+
+        .glitch {
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px #9b4dff, -2px -2px #9b4dff;
+            }
+
+            50% {
+                text-shadow: -2px -2px #9b4dff, 2px 2px #9b4dff;
+            }
+
+            100% {
+                text-shadow: 2px 2px #9b4dff, -2px -2px #9b4dff;
+            }
+        }
+
+        .container {
+            margin-top: 20px;
+            transform: perspective(600px) rotateX(10deg);
+            transition: transform 0.5s ease-in-out;
+            display: block; /* Made the container visible */
+        }
+
+        .container:hover {
+            transform: perspective(600px) rotateX(0deg) scale(1.05);
+        }
+
+        .projects {
+            margin-top: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 15px;
+            width: 180px;  
+            height: 180px;  
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .project img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px #9b4dff;
+        }
+
+        .project:hover img {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: #9b4dff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #9b4dff;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 15px;
+            background: #1a1a1a;
+        }
+
+        footer a {
+            color: #9b4dff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #9b4dff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .glitch {
+                font-size: 1.25rem;
+            }
+
+            .project {
+                width: 70%;
+            }
+
+            footer {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .glitch {
+                font-size: 1.5rem;
+            }
+
+            .project {
+                width: 80%;
+            }
+
+            footer {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .glitch {
+                font-size: 1.75rem;
+            }
+
+            .project {
+                width: 150px;  
+            }
+
+            footer {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+
+    <div id="content" class="container">
+        <header>
+            <h1 class="glitch">Welcome to <strong>MY Projects</strong></h1>
+        </header>
+        <section class="projects">
+            
+
+            <div class="project">
+                <img src="Gojo.jpg" alt="Awesome Project - Gojo">
+            </div>
+
+            <div class="project">
+                <img src="Igris.png" alt="Another One - Igris">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 3">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 4">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 5">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 6">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 7">
+            </div>
+
+            <!-- Added 5 new images -->
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 8">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 9">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 10">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 11">
+            </div>
+
+            <div class="project">
+                <img src="pexels-chudin-alexey-8567137.jpg" alt="Project 12">
+            </div>
+
+            
+
+        </section>
+
+        <footer>
+            <p><a href="MainPage.html">Back to Portfolio</a></p>
+        </footer>
+    </div>
+</body>
+
+<script>
+    document.querySelectorAll('.project img').forEach(img => {
+        img.addEventListener('click', () => {
+            if (img.requestFullscreen) {
+                img.requestFullscreen();
+            } else if (img.mozRequestFullScreen) { 
+                img.mozRequestFullScreen();
+            } else if (img.webkitRequestFullscreen) { 
+                img.webkitRequestFullscreen();
+            } else if (img.msRequestFullscreen) { 
+                img.msRequestFullscreen();
+            }
+        });
+    });
+</script>
+
+
+</html>

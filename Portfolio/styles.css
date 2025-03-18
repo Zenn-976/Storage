@@ -1,0 +1,126 @@
+body {
+    background: #0d0d0d;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.dark-mode {
+    background: #fff;
+    color: #000;
+}
+
+.glitch {
+    font-size: 3rem;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+    50% { text-shadow: -2px -2px #ff00ff, 2px 2px #00ffff; }
+    100% { text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff; }
+}
+
+.container {
+    margin-top: 50px;
+    transform: perspective(600px) rotateX(10deg);
+    transition: transform 0.5s ease-in-out;
+}
+
+.container:hover {
+    transform: perspective(600px) rotateX(0deg) scale(1.05);
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px #ff00ff;
+}
+
+a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff00ff;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background: #1a1a1a;
+    text-align: center;
+}
+
+footer a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ff00ff;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        margin-top: 30px;
+    }
+    .project {
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 20px;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    h1.glitch {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1.glitch {
+        font-size: 1.5rem;
+    }
+
+    .project {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+}
+
+footer a {
+    padding: 8px 12px;
+}
